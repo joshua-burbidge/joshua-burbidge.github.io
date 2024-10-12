@@ -1,18 +1,19 @@
-import { Flex, Heading, HStack, Link } from "@chakra-ui/react";
+import { Flex, Heading, HStack, Link, theme } from "@chakra-ui/react";
 
 function Header() {
+  console.log(theme);
+
   return (
     <Flex 
-      bgColor={'blue.100'} 
+      bgColor={'var(--chakra-colors-chakra-subtle-bg)'} 
       justify={'space-between'}
       align={'center'}
       padding={6}
       position={'sticky'}
       top={0}
       left={0}
-      width={'100%'}
-      height={'100px'}
       zIndex={1}
+      textColor={'blue.800'}
     >
       <Link><Heading size={'lg'}>{'Joshua Burbidge'}</Heading></Link>
       <HStack spacing={8}>
