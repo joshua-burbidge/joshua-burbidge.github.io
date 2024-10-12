@@ -1,18 +1,13 @@
 import './App.css';
-import { Button, ChakraProvider, Container, StackDivider, Text, VStack } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
+import Home from './Home';
+import Header from './Header';
 
 function App() {
-
   return (
     <ChakraProvider>
-      <Container centerContent>
-        <VStack spacing={4} divider={<StackDivider/>}>
-          <Text>{'Hello there this a some text in a Container'}</Text>
-          <Button variant={'solid'}>
-            {'Button'}
-          </Button>
-        </VStack>
-      </Container>
+      <Header/>
+      <Home/>
     </ChakraProvider>
   );
 }
