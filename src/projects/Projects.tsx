@@ -1,11 +1,12 @@
-import { Box, Link, List, Text, VStack } from "@chakra-ui/react";
+import { Box, Em, List, Text, VStack } from "@chakra-ui/react";
 import {
   AccordionItem,
   AccordionItemContent,
   AccordionItemTrigger,
   AccordionRoot,
 } from "@/components/ui/accordion";
-import { LuExternalLink } from "react-icons/lu";
+import ExternalLink from "../components/ExternalLink";
+import { FaGithub } from "react-icons/fa";
 
 function Projects() {
   return (
@@ -13,7 +14,7 @@ function Projects() {
       paddingY={10} width={'600px'}>
       <VStack>
         <Text fontSize={'4xl'}>{'Projects'}</Text>
-        <AccordionRoot multiple defaultValue={["1"]} width={'100%'} size={'lg'} variant={'enclosed'}>
+        <AccordionRoot multiple defaultValue={["1", "2"]} width={'100%'} size={'lg'} variant={'enclosed'}>
           <AccordionItem value="1">
             <AccordionItemTrigger>{'Forum web app'}</AccordionItemTrigger>
             <AccordionItemContent>
@@ -27,12 +28,28 @@ function Projects() {
                 </List.Item>
                 <List.Item>
                   {'Uses '}
-                  <Link href="https://auth0.com/docs/get-started" target={'_blank'} colorPalette={'teal'}>
+                  <ExternalLink href={"https://auth0.com/docs/get-started"}>
                     {'Okta Auth0'}
-                    <LuExternalLink/>
-                  </Link> 
+                  </ExternalLink>
                   {' for user authentication'}</List.Item>
               </List.Root>
+            </AccordionItemContent>
+          </AccordionItem>
+          <AccordionItem value="2">
+            <AccordionItemTrigger>
+              <Box width={'100%'} display={'flex'} justifyContent={'space-between'}>
+                <Text>{'graph_rs: Rust polynomial grapher'}</Text>
+                <ExternalLink href={"https://github.com/JoshBurbidge/graph_rs"}>
+                  <FaGithub/>
+                </ExternalLink>
+              </Box>
+            </AccordionItemTrigger>
+            <AccordionItemContent>
+              <Text>{'Rust application that graphs polynomial functions using the 2D vector graphics library '}
+                <ExternalLink href={"https://github.com/femtovg/femtovg"}>
+                  <Em>{'femtovg.'}</Em>
+                </ExternalLink>
+              </Text>
             </AccordionItemContent>
           </AccordionItem>
         </AccordionRoot>

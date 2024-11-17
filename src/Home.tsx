@@ -1,7 +1,7 @@
 import { Container, StackSeparator, VStack } from '@chakra-ui/react';
 import Profile from './Profile';
 import OtherSection from './OtherSection';
-import Projects from './Projects';
+import Projects from './projects/Projects';
 
 function Home() {
   return (
