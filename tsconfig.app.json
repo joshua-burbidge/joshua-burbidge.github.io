@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "types": [
+      "node"
+    ],
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": [
@@ -20,7 +23,12 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
   },
   "include": [
     "src"

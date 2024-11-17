@@ -1,5 +1,10 @@
 import { Box,  Text, VStack } from "@chakra-ui/react";
-// import { AccordionRoot } from "@chakra-ui/react/a";
+import {
+  AccordionItem,
+  AccordionItemContent,
+  AccordionItemTrigger,
+  AccordionRoot,
+} from "@/components/ui/accordion";
 
 function Projects() {
   return (
@@ -7,9 +12,12 @@ function Projects() {
       <VStack width={'100%'}>
         <Text fontSize={'2xl'}>{'Projects'}</Text>
         <Text>{'Forum web app'}</Text>
-        {/* <Accordion>
-          
-        </Accordion> */}
+        <AccordionRoot multiple defaultValue={["a"]}>
+          <AccordionItem value="a">
+            <AccordionItemTrigger />
+            <AccordionItemContent />
+          </AccordionItem>
+        </AccordionRoot>
       </VStack>
     </Box>
   );
