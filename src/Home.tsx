@@ -1,4 +1,4 @@
-import { Button,  Container, StackDivider, Text, VStack } from '@chakra-ui/react';
+import { Button,  Container, StackSeparator, Text, VStack } from '@chakra-ui/react';
 import Profile from './Profile';
 import OtherSection from './OtherSection';
 import Projects from './Projects';
@@ -6,7 +6,7 @@ import Projects from './Projects';
 function Home() {
   return (
     <Container centerContent height={'2000px'} maxWidth={'container.md'}>
-      <VStack spacing={8} divider={<StackDivider/>} width={'100%'}>
+      <VStack gap={8} separator={<StackSeparator/>} width={'100%'}>
         <Profile/>
         <Projects/>
         <Text>{'Hello there this a some text in a Container'}</Text>

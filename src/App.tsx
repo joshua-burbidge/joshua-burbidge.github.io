@@ -1,14 +1,16 @@
-import { ChakraProvider } from '@chakra-ui/react';
 import Home from './Home';
 import Header from './Header';
 import './main.css';
+import { defaultSystem } from '@chakra-ui/react';
+import { Provider } from './components/ui/provider';
 
 function App() {
+  console.log(defaultSystem);
   return (
-    <ChakraProvider>
+    <Provider>
       <Header/>
       <Home/>
-    </ChakraProvider>
+    </Provider>
   );
 }
 

@@ -5,7 +5,7 @@ import newImg from '../resources/profile-edited-2.jpeg';
 function Profile() {
   return (
     <Box scrollMarginTop={'var(--header-height)'} id={'profile'} paddingY={12}>
-      <Card direction={'row'} borderRadius={'lg'}>
+      <Card.Root flexDirection={'row'} borderRadius={'lg'} variant={'elevated'}>
         <Image src={newImg} height={'200px'} borderLeftRadius={'lg'}></Image>
         <Stack padding={4}>
           <Box>
@@ -15,7 +15,7 @@ function Profile() {
           <Text>{'Card'}</Text>
           <Text>{'Card'}</Text>
         </Stack>
-      </Card>
+      </Card.Root>
     </Box>
   );
 }

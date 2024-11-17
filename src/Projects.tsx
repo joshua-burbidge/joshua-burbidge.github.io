@@ -1,4 +1,4 @@
-import { Accordion, Box,  Text, VStack } from "@chakra-ui/react";
+import { Box,  Text, VStack } from "@chakra-ui/react";
 // import { AccordionRoot } from "@chakra-ui/react/a";
 
 function Projects() {
@@ -7,9 +7,9 @@ function Projects() {
       <VStack width={'100%'}>
         <Text fontSize={'2xl'}>{'Projects'}</Text>
         <Text>{'Forum web app'}</Text>
-        <Accordion>
+        {/* <Accordion>
           
-        </Accordion>
+        </Accordion> */}
       </VStack>
     </Box>
   );

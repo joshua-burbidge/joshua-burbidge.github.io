@@ -1,11 +1,11 @@
-import { Flex, Heading, HStack, Link, theme } from "@chakra-ui/react";
+import { Flex, Heading, HStack, Link } from "@chakra-ui/react";
 
 function Header() {
-  console.log(theme);
+  const textColor = 'blue.800';
 
   return (
     <Flex 
-      bgColor={'var(--chakra-colors-chakra-subtle-bg)'} 
+      bgColor={'blue.50'} 
       justify={'space-between'}
       align={'center'}
       padding={6}
@@ -13,14 +13,13 @@ function Header() {
       top={0}
       left={0}
       zIndex={1}
-      textColor={'blue.800'}
       height={'var(--header-height)'}
     >
-      <Link><Heading size={'lg'}>{'Joshua Burbidge'}</Heading></Link>
-      <HStack spacing={8}>
-        <Link fontWeight={'normal'} href={'#profile'}>{'About Me'}</Link>
-        <Link fontWeight={'normal'} href={'#projectsSection'}>{'Projects'}</Link>
-        <Link fontWeight={'normal'}>{'THERE'}</Link>
+      <Link><Heading textStyle={'3xl'} fontWeight={'bold'} color={textColor}>{'Joshua Burbidge'}</Heading></Link>
+      <HStack gap={8}>
+        <Link color={textColor} fontWeight={'normal'} href={'#profile'}>{'About Me'}</Link>
+        <Link color={textColor} fontWeight={'normal'} href={'#projectsSection'}>{'Projects'}</Link>
+        <Link color={textColor} fontWeight={'normal'}>{'THERE'}</Link>
       </HStack>
     </Flex>
   );
