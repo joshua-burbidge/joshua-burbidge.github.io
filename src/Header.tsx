@@ -1,8 +1,7 @@
 import { Flex, Heading, HStack, Link } from "@chakra-ui/react";
+import ExternalLink from "./components/ExternalLink";
 
 function Header() {
-  const textColor = 'blue.800';
-
   return (
     <Flex 
       bgColor={'blue.50'} 
@@ -14,12 +13,19 @@ function Header() {
       left={0}
       zIndex={1}
       height={'var(--header-height)'}
+      colorPalette={'blue'}
     >
-      <Link><Heading textStyle={'3xl'} fontWeight={'bold'} color={textColor}>{'Joshua Burbidge'}</Heading></Link>
+      <Link href={'#profile'}>
+        <Heading textStyle={'3xl'} fontWeight={'bold'}>{'Joshua Burbidge'}</Heading>
+      </Link>
       <HStack gap={8}>
-        <Link color={textColor} fontWeight={'normal'} href={'#profile'}>{'About Me'}</Link>
-        <Link color={textColor} fontWeight={'normal'} href={'#projectsSection'}>{'Projects'}</Link>
-        <Link color={textColor} fontWeight={'normal'}>{'THERE'}</Link>
+        <Link href={'#profile'}>{'About Me'}</Link>
+        <Link href={'#projectsSection'}>{'Projects'}</Link>
+        <ExternalLink 
+          href={'/resources/resume-public.pdf'}
+        >
+          {'Resume'}
+        </ExternalLink>
       </HStack>
     </Flex>
   );
