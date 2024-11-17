@@ -1,4 +1,4 @@
-import { Box, Em, List, Text, VStack } from "@chakra-ui/react";
+import { Box, Em, Image, List, Text, VStack } from "@chakra-ui/react";
 import {
   AccordionItem,
   AccordionItemContent,
@@ -7,11 +7,12 @@ import {
 } from "@/components/ui/accordion";
 import ExternalLink from "../components/ExternalLink";
 import { FaGithub } from "react-icons/fa";
+import graphRsImg from '../../resources/graph_rs_2.png';
 
 function Projects() {
   return (
     <Box scrollMarginTop={'var(--header-height)'} id={'projectsSection'} 
-      paddingY={10} width={'600px'}>
+      paddingY={10} maxWidth={'600px'}>
       <VStack>
         <Text fontSize={'4xl'}>{'Projects'}</Text>
         <AccordionRoot multiple defaultValue={["1", "2"]} width={'100%'} size={'lg'} variant={'enclosed'}>
@@ -50,6 +51,7 @@ function Projects() {
                   <Em>{'femtovg.'}</Em>
                 </ExternalLink>
               </Text>
+              <Image src={graphRsImg} width={'100%'} borderRadius={'xs'} marginTop={'5px'}/>
             </AccordionItemContent>
           </AccordionItem>
         </AccordionRoot>
