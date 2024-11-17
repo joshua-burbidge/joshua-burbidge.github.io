@@ -18,8 +18,8 @@ function Header() {
     >
       <Link><Heading size={'lg'}>{'Joshua Burbidge'}</Heading></Link>
       <HStack spacing={8}>
-        <Link fontWeight={'normal'} href={'#profile'}>{'THERE'}</Link>
-        <Link fontWeight={'normal'} href={'#otherSection'}>{'THERE'}</Link>
+        <Link fontWeight={'normal'} href={'#profile'}>{'About Me'}</Link>
+        <Link fontWeight={'normal'} href={'#projectsSection'}>{'Projects'}</Link>
         <Link fontWeight={'normal'}>{'THERE'}</Link>
       </HStack>
     </Flex>
