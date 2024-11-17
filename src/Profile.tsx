@@ -1,5 +1,4 @@
 import { Box, Card, Image, Stack, Text } from "@chakra-ui/react";
-// import imgUrl from '../resources/profile.jpg';
 import newImg from '../resources/profile-edited-2.jpeg';
 
 function Profile() {

@@ -1,5 +1,6 @@
 import { Flex, Heading, HStack, Link } from "@chakra-ui/react";
 import ExternalLink from "./components/ExternalLink";
+import resume from '../resources/resume-public.pdf';
 
 function Header() {
   return (
@@ -22,7 +23,7 @@ function Header() {
         <Link href={'#profile'}>{'About Me'}</Link>
         <Link href={'#projectsSection'}>{'Projects'}</Link>
         <ExternalLink 
-          href={'/resources/resume-public.pdf'}
+          href={resume}
         >
           {'Resume'}
         </ExternalLink>
