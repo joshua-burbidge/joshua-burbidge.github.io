@@ -1,6 +1,5 @@
 import { Container, StackSeparator, VStack } from '@chakra-ui/react';
 import Profile from './Profile';
-import OtherSection from './OtherSection';
 import Projects from './projects/Projects';
 
 function Home() {
@@ -9,7 +8,6 @@ function Home() {
       <VStack gap={8} separator={<StackSeparator/>} width={'100%'}>
         <Profile/>
         <Projects/>
-        <OtherSection/>
       </VStack>
     </Container>
   );

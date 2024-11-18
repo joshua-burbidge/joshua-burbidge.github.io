@@ -6,8 +6,6 @@ import path from 'path';
 export default defineConfig({
   resolve: {
     alias: {
-      // idk
-      // eslint-disable-next-line
       "@": path.resolve(__dirname, 'src')
     }
   },
