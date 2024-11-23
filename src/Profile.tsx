@@ -3,7 +3,12 @@ import newImg from '../resources/profile-edited-2.jpeg';
 
 function Profile() {
   return (
-    <Box scrollMarginTop={'var(--header-height)'} id={'profile'} paddingY={12}>
+    <Box
+      id={'profile'}
+      scrollMarginTop={'var(--header-height)'}
+      paddingY={12}
+      minHeight={'800px'}
+    >
       <Card.Root flexDirection={'row'} width={'600px'} borderRadius={'lg'} variant={'elevated'}>
         <Image src={newImg} height={'250px'} borderLeftRadius={'lg'}></Image>
         <Stack padding={4} marginX={'auto'}>

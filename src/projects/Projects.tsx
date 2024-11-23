@@ -24,8 +24,12 @@ function Projects() {
   }];
 
   return (
-    <Box scrollMarginTop={'var(--header-height)'} id={'projectsSection'} 
-      paddingY={10} width={'800px'}>
+    <Box 
+      scrollMarginTop={'var(--header-height)'} 
+      id={'projects'} 
+      paddingY={10} 
+      width={'800px'}
+    >
       <VStack>
         <Text fontSize={'4xl'}>{'Projects'}</Text>
         <AccordionRoot multiple defaultValue={["1", "2"]} width={'100%'} size={'lg'} variant={'enclosed'}>

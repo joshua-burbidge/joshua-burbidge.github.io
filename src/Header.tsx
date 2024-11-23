@@ -21,7 +21,7 @@ function Header() {
       </Link>
       <HStack gap={8}>
         <Link href={'#profile'}>{'About Me'}</Link>
-        <Link href={'#projectsSection'}>{'Projects'}</Link>
+        <Link href={'#projects'}>{'Projects'}</Link>
         <ExternalLink 
           href={resume}
         >
