@@ -30,11 +30,20 @@ function Projects() {
       paddingY={10} 
       width={'800px'}
     >
-      <VStack>
+      <VStack gap={8}>
         <Text fontSize={'4xl'}>{'Projects'}</Text>
-        <AccordionRoot multiple defaultValue={["1", "2"]} width={'100%'} size={'lg'} variant={'enclosed'}>
+        <AccordionRoot 
+          multiple
+          defaultValue={["1", "2"]}
+          width={'100%'}
+          size={'lg'}
+          variant={'enclosed'}
+          border={'1px black solid'}
+        >
           <AccordionItem value="1">
-            <AccordionItemTrigger>{'Forum web app'}</AccordionItemTrigger>
+            <AccordionItemTrigger backgroundColor={'bg.subtle'}>
+              {'Forum web app'}
+            </AccordionItemTrigger>
             <AccordionItemContent>
               <VStack align={'left'}>
                 <Text>
@@ -57,7 +66,7 @@ function Projects() {
             </AccordionItemContent>
           </AccordionItem>
           <AccordionItem value="2">
-            <AccordionItemTrigger>
+            <AccordionItemTrigger backgroundColor={'bg.subtle'}>
               <Box width={'100%'} display={'flex'} justifyContent={'space-between'}>
                 <Text>{'graph_rs: Rust polynomial grapher'}</Text>
                 {/* <ExternalLink href={"https://github.com/JoshBurbidge/graph_rs"}>

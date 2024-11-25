@@ -15,6 +15,7 @@ function Header() {
       zIndex={1}
       height={'var(--header-height)'}
       colorPalette={'blue'}
+      borderBlockEnd={'1px solid black'}
     >
       <Link href={'#profile'}>
         <Heading textStyle={'3xl'} fontWeight={'bold'}>{'Joshua Burbidge'}</Heading>

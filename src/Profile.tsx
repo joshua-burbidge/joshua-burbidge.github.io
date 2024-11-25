@@ -7,7 +7,8 @@ function Profile() {
       id={'profile'}
       scrollMarginTop={'var(--header-height)'}
       paddingY={12}
-      minHeight={'800px'}
+      minHeight={'600px'}
+      alignContent={'center'}
     >
       <Card.Root flexDirection={'row'} width={'600px'} borderRadius={'lg'} variant={'elevated'}>
         <Image src={newImg} height={'250px'} borderLeftRadius={'lg'}></Image>

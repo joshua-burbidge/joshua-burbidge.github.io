@@ -1,10 +1,10 @@
-import { Container, StackSeparator, VStack } from '@chakra-ui/react';
+import { Box, Container, StackSeparator, VStack } from '@chakra-ui/react';
 import Profile from './Profile';
 import Projects from './projects/Projects';
 import { useEffect, useState } from 'react';
 
 function Home() {
-  const [backgroundColor, setBackgroundColor] = useState("white");
+  const [backgroundColor, setBackgroundColor] = useState("blue.50");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -14,7 +14,7 @@ function Home() {
             if (entry.target.id === "profile") {
               setBackgroundColor("blue.50");
             } else if (entry.target.id === "projects") {
-              setBackgroundColor("#ffe4e1");
+              setBackgroundColor("green.200");
             }
           }
         });
@@ -34,18 +34,21 @@ function Home() {
   }, []);
 
   return (
-    <Container 
-      centerContent 
-      minHeight={'2000px'} 
-      maxWidth={'container.md'} 
+    <Box
       backgroundColor={backgroundColor}
-      transition={"background-color 0.5s ease-in-out"}
+      transition={"background-color 1s ease-in-out"}
     >
-      <VStack gap={8} separator={<StackSeparator/>} width={'100%'}>
-        <Profile/>
-        <Projects/>
-      </VStack>
-    </Container>
+      <Container 
+        centerContent 
+        minHeight={'2000px'} 
+        maxWidth={'container.md'} 
+      >
+        <VStack gap={8} separator={<StackSeparator/>} width={'100%'}>
+          <Profile/>
+          <Projects/>
+        </VStack>
+      </Container>
+    </Box>
   );
 }
 
