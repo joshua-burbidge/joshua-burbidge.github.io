@@ -1,6 +1,6 @@
-# joshburbidge.github.io
+# joshua-burbidge.github.io
 
-https://joshburbidge.github.io
+https://joshua-burbidge.github.io
 
 A little (wip) portfolio site with vite + react + chakra-ui component library.
 
