@@ -42,6 +42,27 @@ function Projects() {
         >
           <AccordionItem value="1">
             <AccordionItemTrigger backgroundColor={'bg.subtle'}>
+              <Box width={'100%'} display={'flex'} justifyContent={'space-between'}>
+                <Text>{'graph_rs: Rust polynomial grapher'}</Text>
+                {/* <ExternalLink href={"https://github.com/JoshBurbidge/graph_rs"}>
+                  <FaGithub/>
+                </ExternalLink> */}
+              </Box>
+            </AccordionItemTrigger>
+            <AccordionItemContent>
+              <VStack align={'left'}>
+                <Text>{'Rust application that graphs polynomial functions using the 2D vector graphics library '}
+                  <ExternalLink href={"https://github.com/femtovg/femtovg"}>
+                    <Em>{'femtovg.'}</Em>
+                  </ExternalLink>
+                </Text>
+                <Image src={graphRsImg} width={'100%'} borderRadius={'xs'} marginTop={'5px'}/>
+                <Links links={graphLinks}/>
+              </VStack>
+            </AccordionItemContent>
+          </AccordionItem>
+          <AccordionItem value="2">
+            <AccordionItemTrigger backgroundColor={'bg.subtle'}>
               {'Forum web app'}
             </AccordionItemTrigger>
             <AccordionItemContent>
@@ -62,27 +83,6 @@ function Projects() {
                     {' for user authentication'}</List.Item>
                 </List.Root>
                 <Links links={forumLinks}/>
-              </VStack>
-            </AccordionItemContent>
-          </AccordionItem>
-          <AccordionItem value="2">
-            <AccordionItemTrigger backgroundColor={'bg.subtle'}>
-              <Box width={'100%'} display={'flex'} justifyContent={'space-between'}>
-                <Text>{'graph_rs: Rust polynomial grapher'}</Text>
-                {/* <ExternalLink href={"https://github.com/JoshBurbidge/graph_rs"}>
-                  <FaGithub/>
-                </ExternalLink> */}
-              </Box>
-            </AccordionItemTrigger>
-            <AccordionItemContent>
-              <VStack align={'left'}>
-                <Text>{'Rust application that graphs polynomial functions using the 2D vector graphics library '}
-                  <ExternalLink href={"https://github.com/femtovg/femtovg"}>
-                    <Em>{'femtovg.'}</Em>
-                  </ExternalLink>
-                </Text>
-                <Image src={graphRsImg} width={'100%'} borderRadius={'xs'} marginTop={'5px'}/>
-                <Links links={graphLinks}/>
               </VStack>
             </AccordionItemContent>
           </AccordionItem>
