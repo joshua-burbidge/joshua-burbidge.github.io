@@ -13,7 +13,7 @@ function Links({links}: {links: LinkProps[]}) {
       <Text textStyle={'lg'} fontWeight={'medium'}>{'Links'}</Text>
       <VStack align={'start'} gap={1} textStyle={'sm'}>
         {links.map((l, index) => (
-          <ExternalLink href={l.href} key={index}>
+          <ExternalLink href={l.href} key={index} icon>
             {l.children}
           </ExternalLink>
         ))}

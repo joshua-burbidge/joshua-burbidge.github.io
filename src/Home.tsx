@@ -1,4 +1,4 @@
-import { Box, Container, StackSeparator, VStack } from '@chakra-ui/react';
+import { Box, Container, Separator, VStack } from '@chakra-ui/react';
 import Profile from './Profile';
 import Projects from './projects/Projects';
 import { useEffect, useState } from 'react';
@@ -43,7 +43,7 @@ function Home() {
         minHeight={'2000px'} 
         maxWidth={'container.md'} 
       >
-        <VStack gap={8} separator={<StackSeparator/>} width={'100%'}>
+        <VStack gap={8} separator={<Separator size={'lg'}borderColor={'black'}/>} width={'100%'}>
           <Profile/>
           <Projects/>
         </VStack>
