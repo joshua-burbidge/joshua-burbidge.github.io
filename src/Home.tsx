@@ -19,7 +19,7 @@ function Home() {
           }
         });
       },
-      { threshold: 0.5 } 
+      { threshold: 0.3 } 
       // Trigger when 50% of the section is visible
       // If using < 50% it can get stuck in between
     );

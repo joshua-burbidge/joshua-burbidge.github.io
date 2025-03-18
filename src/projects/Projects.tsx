@@ -64,7 +64,8 @@ function Projects() {
                     {'Configure initial conditions, then the application calculates and draws orbits caused by gravity.'}
                   </List.Item>
                   <List.Item>{'Can automatically determine circular velocity or escape velocity for two objects.'}</List.Item>
-                  <List.Item>{'Runs natively and also compiles to WebAssembly - hosted on AWS S3.'}</List.Item>
+                  <List.Item>{'Runs natively and also compiles to WebAssembly.'}</List.Item>
+                  <List.Root ps={'5'}><List.Item>{'Deploys to AWS S3 using Github Actions and Terraform.'}</List.Item></List.Root>
                 </List.Root>
                 <Links links={graviLinks}/>
               </VStack>
@@ -89,7 +90,7 @@ function Projects() {
                     <ExternalLink href={"https://auth0.com/docs/get-started"}>
                       {'Okta Auth0'}
                     </ExternalLink>
-                    {' for user authentication'}</List.Item>
+                    {' for user authentication.'}</List.Item>
                 </List.Root>
                 <Links links={forumLinks}/>
               </VStack>
