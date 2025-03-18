@@ -8,6 +8,7 @@ import {
 import ExternalLink from "../components/ExternalLink";
 import { FaGithub } from "react-icons/fa";
 import graphRsImg from '../../resources/graph_rs_2.png';
+import graviImg from '../../resources/gravi.png';
 import Links, { LinkProps } from "./Links";
 
 function Projects() {
@@ -22,6 +23,13 @@ function Projects() {
     href: "https://github.com/JoshBurbidge/graph_rs",
     children: (<><FaGithub/><Text>{'Github'}</Text></>)
   }];
+  const graviLinks = [{
+    href: "http://gravi-bucket.s3-website-us-east-1.amazonaws.com/web/",
+    children: (<Text>{'Hosted online'}</Text>)
+  }, {
+    href: "https://github.com/JoshBurbidge/gravi",
+    children: (<><FaGithub/><Text>{'Github'}</Text></>)
+  }];
 
   return (
     <Box 
@@ -34,7 +42,7 @@ function Projects() {
         <Text fontSize={'4xl'}>{'Projects'}</Text>
         <AccordionRoot 
           multiple
-          defaultValue={["1", "2"]}
+          defaultValue={["1", "2", "3"]}
           width={'100%'}
           size={'lg'}
           variant={'enclosed'}
@@ -42,28 +50,29 @@ function Projects() {
         >
           <AccordionItem value="1">
             <AccordionItemTrigger backgroundColor={'bg.subtle'}>
-              <Box width={'100%'} display={'flex'} justifyContent={'space-between'}>
-                <Text>{'graph_rs: Rust polynomial grapher'}</Text>
-                {/* <ExternalLink href={"https://github.com/JoshBurbidge/graph_rs"}>
-                  <FaGithub/>
-                </ExternalLink> */}
-              </Box>
+              <Text fontSize={'2xl'}>{'gravi: Orbital mechanics simulator'}</Text>
+              <ExternalLink icon href={"http://gravi-bucket.s3-website-us-east-1.amazonaws.com/web/"}>{''}</ExternalLink>
             </AccordionItemTrigger>
             <AccordionItemContent>
-              <VStack align={'left'}>
-                <Text>{'Rust application that graphs polynomial functions using the 2D vector graphics library '}
-                  <ExternalLink href={"https://github.com/femtovg/femtovg"}>
-                    <Em>{'femtovg.'}</Em>
-                  </ExternalLink>
+              <VStack align={"left"}>
+                <Text>
+                  {'Rust application that models 2-dimensional orbital mechanics. Can simulate simple stable orbits or complex multi-body systems.'}
                 </Text>
-                <Image src={graphRsImg} width={'100%'} borderRadius={'xs'} marginTop={'5px'}/>
-                <Links links={graphLinks}/>
+                <Image src={graviImg} width={'100%'} borderRadius={'xs'} marginTop={'5px'}/>
+                <List.Root>
+                  <List.Item>
+                    {'Configure initial conditions, then the application calculates and draws orbits caused by gravity.'}
+                  </List.Item>
+                  <List.Item>{'Can automatically determine circular velocity or escape velocity for two objects.'}</List.Item>
+                  <List.Item>{'Runs natively and also compiles to WebAssembly - hosted on AWS S3.'}</List.Item>
+                </List.Root>
+                <Links links={graviLinks}/>
               </VStack>
             </AccordionItemContent>
           </AccordionItem>
           <AccordionItem value="2">
             <AccordionItemTrigger backgroundColor={'bg.subtle'}>
-              {'Forum web app'}
+              <Text fontSize={'2xl'}>{'Forum web app'}</Text>
             </AccordionItemTrigger>
             <AccordionItemContent>
               <VStack align={'left'}>
@@ -83,6 +92,27 @@ function Projects() {
                     {' for user authentication'}</List.Item>
                 </List.Root>
                 <Links links={forumLinks}/>
+              </VStack>
+            </AccordionItemContent>
+          </AccordionItem>
+          <AccordionItem value="3">
+            <AccordionItemTrigger backgroundColor={'bg.subtle'}>
+              <Box width={'100%'} display={'flex'} justifyContent={'space-between'}>
+                <Text fontSize={'2xl'}>{'graph_rs: Rust polynomial grapher'}</Text>
+                {/* <ExternalLink href={"https://github.com/JoshBurbidge/graph_rs"}>
+                  <FaGithub/>
+                </ExternalLink> */}
+              </Box>
+            </AccordionItemTrigger>
+            <AccordionItemContent>
+              <VStack align={'left'}>
+                <Text>{'Rust application that graphs polynomial functions using the 2D vector graphics library '}
+                  <ExternalLink href={"https://github.com/femtovg/femtovg"}>
+                    <Em>{'femtovg.'}</Em>
+                  </ExternalLink>
+                </Text>
+                <Image src={graphRsImg} width={'100%'} borderRadius={'xs'} marginTop={'5px'}/>
+                <Links links={graphLinks}/>
               </VStack>
             </AccordionItemContent>
           </AccordionItem>
